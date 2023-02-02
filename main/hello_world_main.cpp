@@ -15,9 +15,6 @@ extern "C"
 	void app_main(void);
 }
 
-
-
-
 class Foo
 {
 public:
@@ -38,11 +35,9 @@ void CallbackHandler(int value)
 
 void app_main(void)
 {
-    printf("Hello world!\n");
-	
+	printf("Hello world!\n");
 	Foo foo;
 	foo.SomeCallback.Bind(CallbackHandler);
-	
 	foo.Run();
 	
 	while (1)
